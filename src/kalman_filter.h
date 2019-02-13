@@ -4,6 +4,8 @@
 #include "Eigen/Dense"
 
 class KalmanFilter {
+    
+    
  public:
   /**
    * Constructor
@@ -45,6 +47,9 @@ class KalmanFilter {
    * @param z The measurement at k+1
    */
   void UpdateEKF(const Eigen::VectorXd &z);
+    
+    
+  void CommonUpdate(const Eigen::VectorXd &y);
 
   // state vector
   Eigen::VectorXd x_;
